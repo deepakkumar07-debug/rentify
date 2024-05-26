@@ -5,7 +5,6 @@ const Property = require('../models/property');
 
 // Post a new property
 router.post('/', protect, async (req, res) => {
-    console.log('s', req.body)
     const { area, bedrooms, bathrooms, nearbyHospitals, nearbyColleges } = req.body;
     try {
         const property = new Property({
